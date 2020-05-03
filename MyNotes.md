@@ -5,9 +5,13 @@ Enough ranting for now- let's get to work!
 
 # What does this Project actually want me to do?
 1) Demonstrate my ability to:
+
     A) Collect Data
+
     B) Work With Data 
+
     C) Clean Data
+
   .... Okay, I know I said ranting over, but really- how is working with and cleaning data different? Yes, knowing how to display and play with data is different than publishing a final view- but seriously, this is the definition of CLEANING data... its not a 2 part process- each data set is different and has varying amounts of cleaning needed...
 
 ... okay, back on track...
@@ -17,9 +21,13 @@ Enough ranting for now- let's get to work!
 3) Grading will be a series of yes/no questions related to the project... okay- well if you're reading this, then hopefully I'll have already convinced you to give me more yes answers than no answers :)
 
 4) Submission will be :
+
     A) A Tidy data set
+
     B) A link to this GitHub REPO with the script for performing the analysis
+
     C) A CodeBook named 'CodeBook.md' that describes the variables, data, any transformations or 'work' performed to clean up the data
+
     D) A 'README.md' file in the REPO with the scripts- how all the scripts work and how they are connected
   
 ## Okay - But that's only the expected tangible outcomes for the project .... What is the project though?
@@ -30,10 +38,15 @@ More specifically we get a link to the University of California Irvine's Machine
 
 ## Wait! A hidden requirement- I think I was correct all along that this assignment is horribly written!
 5) I should create a single R script, 'run_analysis.R' that does the following:
+
     A) Merges the training and test sets to create a unified data set
+
     B) Extracts ongly the measurements on the mean and standard deviation for each measurement
+
     C) Uses descriptive activity names to name the activities in the data set (okay- I'll revisit this one once I've reviewed the data set overview)
+
     D) Appropriately labels the data set with descriptive variable names (similarly revisit)
+
     E) From the data set in step 4, creates a second, indepentant tidy data set with the average of each variable for each activity and each subject
   
 ## WOW....
@@ -43,23 +56,37 @@ So seriously, this is bad. I really hope this isn't what I should expect as assi
 *Remember to Acknowledge the Data License Requirements in the Dataset README
 
 1) Create a GitHub REPO containing the following files:
+
     *CodeBook.md
+
     *License.md
+
     *MyNotes.md
+
     *README.md
+
     *acquire_project_data.R
+
     *run_analysis.R (I'm peeved at this script name because the prompt specifically states we're not running analysis- we're simply cleaning the data!)
+
     *tidy_data_set_submission.txt
 
 2) Work on developing the R script 'acquire_project_data.R' to download and load the initial dataset into R
 
 3) Work on developing the R script 'run_analysis.R' which:
+
     A) Merges the training and test data sets into a singular data set
+
     B) Extracts only the measurements on the mean and standard deviation for each measurement
+
 * Investigate completing both of these steps in a singular action in order to preserve memory due to the size of the datasets
+
     C) Uses/Assigns Descriptive Activity Names to the Dataset ????
+
     D) Labels the Dataset with Appropriate Descriptive Variable Names
+
     E) Creates a new Dataset with the average of each variable for each activity and each subject???
+
     F) Compare my results with others to identify if I am on the right path...
 
 4) Document my Commit Notes and explanations into README & CodeBook files
