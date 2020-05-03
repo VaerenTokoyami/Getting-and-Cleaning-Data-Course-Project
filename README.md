@@ -1,7 +1,7 @@
 # Getting and Cleaning Data Course Project Description
 This is my Submission for the End of Course Project for the Coursera/JHU Data Science Specialization Course "Getting and Cleaning Data". This README is organized into multiple sections, to include the project & submission prompts, my README  explanations for the files contained in this REPO, and how each of the scripts function.
 
-# Project Prompt:
+## Project Prompt:
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.
 Review criteria
 
@@ -33,7 +33,7 @@ You should create one R script called run_analysis.R that does the following.
 
 Good luck!
 
-# Prompt for My Submission:
+## Prompt for My Submission:
 Project Title *
 
 Please upload the tidy data set created in step 5 of the instructions. Please upload your data set as a txt file created with write.table() using row.name=FALSE (do not cut and paste a dataset directly into the text box, as this may cause errors saving your submission).
@@ -41,5 +41,5 @@ Please upload the tidy data set created in step 5 of the instructions. Please up
 Please submit a link to a Github repo with the code for performing your analysis. The code should have a file run_analysis.R in the main directory that can be run as long as the Samsung data is in your working directory. The output should be the tidy data set you submitted for part 1. You should include a README.md in the repo describing how the script works and the code book describing the variables.
 
 
-# README Explanation:
+## README Explanation:
 
