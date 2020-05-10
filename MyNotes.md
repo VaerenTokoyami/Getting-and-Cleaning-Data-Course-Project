@@ -95,3 +95,24 @@ So seriously, this is bad. I really hope this isn't what I should expect as assi
 
 I'm going to stop here for the moment, commit this point of the notes to the REPO, and get started on figuring this out!
 
+
+# Back at it
+So, a week later and I'm finally back at it- rather than take notes as I worked, I'm going in reverse, working through each of my previously proposed steps and taking notes as I complete steps. So, here it goes!
+
+## Created the GitHub Repo
+Pretty simple since I had already set-up the REPO last week, so just filled out the data files to be completed and spent a few minutes fining the Data license details from the original dataset. At least that's one part of this project complete!
+
+## Completed acquire_project_data.R
+So this step took some time to refamiliarize myself with the different core R file management commands and functions. Incredibly grateful I remember the function for the help tool- can't go wrong by abusing the help tool to work you're way through how to get the code to do what you want it to!
+
+I organized this script to stick to the function of downloading the data and any libraries for the project and loading them into R Studio. So naturally since we're dealing with organizing data, then it makes sense to load dplyr to enable easy transformations of data into meaningful 'tidy' data. Next, I had to identify where the data is stored, and acquire the data, which is hosted in a zip format, so I would need to 'unzip' the data as well. Originally I was considering using curl function, but stumbled upon the download.file function, which seems to handle downloads more efficenty and even allows for multiple simultaneous downloads.
+
+Now that I had the file downloaded, I needed to unzip the file, and went back to alter both functions to account for whether or not the file was downloaded and already unzipped - something I experimented with in later steps when I had accidentially typo'd the file extension for test_y_values.
+
+Now the the data was downloaded, I attempted to manually open the files to explore the raw data so that I could assign meaningful variable names to each loaded data file. When attempting to open the .txt files resulted in crashing my notepad application, i stuck with training/test, then the variable name from the filename (subjects,x,y), then for x & y added 'values' to highlight these are data values- I will later revisit the data documentation for more meaninful data labels prior working on the run_analysis.R script, but wanted to ensure I could load the data prior to a lunch break.
+
+Since the data folder structure was seperated into training and test data, I broke out the data importation by folder that way if I encountered any issues, I could easily isolate if the folder was a variable in play. Since I had no visibility of what the data appeared like, my first attempt worked in assuming the data was stored tables rather than more complex matricies- from there I just relied upon the R help files to ensure I assigned all neccessary values to get each function to properly load the data, then completed for both the training and test data.
+
+Finally, I moved back out to the primary data folder (not project folder, just the main data folder), in which I loaded the features, but noticed that the second column contained duplicates- so to ensure I maintained the full table/dataset, I dug around the help file to identify the as.is variable to set as true to ensure R didn't deduplicate the second column and just retained the table "as is". I thin loaded the activty labels, and since they were missing headers, I assigned some to make the tidying process easier in the next step of this project- after I eat!
+
+Prior to moving on- I reviewed the data reference material and altered the data labels to more accurately represent the data.
