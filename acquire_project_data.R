@@ -32,14 +32,14 @@ if(!file.exists(origin_data_folder_path)){
 ## Step 3.1 - Load the Training Data
 
 training_subjects <- read.table(file.path(origin_data_folder_path, "train", "subject_train.txt"))
-training_x_values <- read.table(file.path(origin_data_folder_path, "train", "X_train.txt"))
-training_y_values <- read.table(file.path(origin_data_folder_path, "train", "y_train.txt"))
+training_data <- read.table(file.path(origin_data_folder_path, "train", "X_train.txt"))
+training_activity <- read.table(file.path(origin_data_folder_path, "train", "y_train.txt"))
 
 ## Step 3.2 - Load the Test Data
 
 test_subjects <- read.table(file.path(origin_data_folder_path, "test", "subject_test.txt"))
-test_x_values <- read.table(file.path(origin_data_folder_path, "test", "X_test.txt"))
-test_y_values <- read.table(file.path(origin_data_folder_path, "test", "y_test.txt"))
+test_data <- read.table(file.path(origin_data_folder_path, "test", "X_test.txt"))
+test_activity <- read.table(file.path(origin_data_folder_path, "test", "y_test.txt"))
 
 ## Step 3.3 - Load the Features
 ### Since feature names or not unique, need to specify to import as is in order to not eliminate load of deduplication
@@ -48,5 +48,5 @@ features <- read.table(file.path(origin_data_folder_path, "features.txt"), as.is
 
 ## Step 3.4 - Load the Activity Labels
 
-activities <- read.table(file.path(origin_data_folder_path, "activity_labels.txt"))
-colnames(activities) <- c("activity_id","activity_label")
+activity_labels <- read.table(file.path(origin_data_folder_path, "activity_labels.txt"))
+colnames(activity_labels) <- c("activity_id","activity_label")
