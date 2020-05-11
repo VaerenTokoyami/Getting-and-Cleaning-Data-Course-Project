@@ -116,3 +116,25 @@ Since the data folder structure was seperated into training and test data, I bro
 Finally, I moved back out to the primary data folder (not project folder, just the main data folder), in which I loaded the features, but noticed that the second column contained duplicates- so to ensure I maintained the full table/dataset, I dug around the help file to identify the as.is variable to set as true to ensure R didn't deduplicate the second column and just retained the table "as is". I thin loaded the activty labels, and since they were missing headers, I assigned some to make the tidying process easier in the next step of this project- after I eat!
 
 Prior to moving on- I reviewed the data reference material and altered the data labels to more accurately represent the data.
+
+## Completed run_analysis.R
+
+So yeah- like everything else thus far- once you break this down into bit-sized chunks, and sometimes break-it down even further, then it becomes extremely simplistic.
+
+I began by loading /running the previously created script to acquire and load all the data for the assignment. Next I had to figure out the best method to combine all of the different tables into a singular data-set. This took a bit of trial and error, reviewing the earlier weeks of the course and looking at some different approaches to concatenating the data together. I ultimately determined it would be easiest to use row and column binding (this was greatly aided by the subjects for test and training didn't overlap). Then, by adding the column names from the activities table, I now had some column labels to work with and for the first time the data itself started to make sense- no longer was this data just numbers without context, now the context was beginning to take shape.
+
+The next step, optional on my system, but I read in a lot of places that R is very memory intensive, so I removed the earlier tables from my environment ensuring that RAM was freed by closing these no longer needed tables from memory.
+
+The next step was to determine which columns met the criteria of extracting only the measurements on meand and standard deviation- this took a little more time to determine exactly what was meant by the prompt's guidance on this step, but once I understood we were meant to cull the number of columns, then I knew we would be using grepl as we most recently learned how to use grepl and gsub. Then, once I assigned the desired columns to be kept to a variable, then I established that only these columns would remain in the dataset. 
+
+The next steps were to assign and clean up activity and variable names.  Preferring python, it took me some time not just jumping into a for loop to swap the numeric codes for activities to the descriptive text, but I finally came across the factor function in the R help tool, and while I may have included an extra argument or 2, it seems to be working alright.
+
+For the variable names, I tried for some time to figure out a smart easy way to clean these up, but ended up just with a list of gsub replacements in a variable list i scraped from the table's column names, which since was still part of the table, auto-refreshed the values in the table with any changes. I was disappointed at first with my underscore naming separation because some columns which didn't have X,Y or Z measurements had a trailing underscore- so I applied a REGEX fix to remove any trailing underscores.
+
+Finally, I created the new independant tidy dataset utilizing dplyr's group_by and summarization functions. Once it appeared in the environment view of the table that this was what the end result should appear like, then I completed the script by writing the table to the project folder as required.
+
+## README & CodeBook
+So I'm about to go back through everything to knock these out- honestly feel like these notes should suffice, but at least I'm getting plenty of practice on conforming to standards :)
+
+Thanks Again!
+-Vaeren
