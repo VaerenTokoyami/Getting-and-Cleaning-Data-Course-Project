@@ -42,4 +42,15 @@ Please submit a link to a Github repo with the code for performing your analysis
 
 
 ## README Explanation:
+For my submission, I relied upon the original dataset directly from University of California Irvine- url: http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip
 
+This data set is organized into the following documents and scripts:
+* This README
+* A CodeBook file for additional details
+* A Notes file to get a better understanding of how I worked through the project prompt and completed this project
+* A license file crediting the project creators
+* R Script: acquire_project_data.R which downloads and loads the datasets for use in this project
+* R Script: run_analysis.R which cleans and tidy's the dataset as prescribed in the project prompt
+* A new dataset table stored in .txt format: "tidy_data_set_submission.txt" - this is the resulting tidy dataset from this project.
+
+This project was completed April-May 2020 using RStudio Version 1.2.5001 running R version 3.6.1 (2019-07-05) with the dplyr package version 0.8.3.
