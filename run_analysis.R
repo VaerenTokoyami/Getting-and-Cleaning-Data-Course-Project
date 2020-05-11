@@ -64,6 +64,10 @@ sensor_data_col_labels <- gsub("mean", "Mean_", sensor_data_col_labels)
 sensor_data_col_labels <- gsub("std", "standardDeviation_", sensor_data_col_labels)
 sensor_data_col_labels <- gsub("_$", "", sensor_data_col_labels)
 
+## Step 5.4 - Assign new column labels to dataset
+
+colnames(sensor_data) <- sensor_data_col_labels
+
 # Step 6 - Creates a new, independant tidy Dataset with the average of each variable for each activity and each subject
 
 ## Step 6.1 - Groups the dataset by subject and activity, then summarizes using mean
